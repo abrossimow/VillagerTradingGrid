@@ -32,5 +32,13 @@
     "suggests": {
         "another-mod": "*"
     }
+    "entrypoints": {
+  "main": [
+    "tfar.villagertradinggrid.ExampleMod"
+  ],
+  "client": [
+    "tfar.villagertradinggrid.ExampleModClient"
+  ]
+}
 }
   
