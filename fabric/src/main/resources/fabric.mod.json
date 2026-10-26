@@ -15,9 +15,12 @@
     "icon": "assets/modid/${mod_id}.png",
     "environment": "*",
     "entrypoints": {
-        "main": [
-          "tfar.villagertradinggrid.ExampleMod"
-        ]
+      "main": [
+        "tfar.villagertradinggrid.ExampleMod"
+      ],
+      "client": [
+        "tfar.villagertradinggrid.ExampleModClient"
+      ]
     },
     "mixins": [
         "${mod_id}.mixins.json",
@@ -32,13 +35,6 @@
     "suggests": {
         "another-mod": "*"
     }
-    "entrypoints": {
-  "main": [
-    "tfar.villagertradinggrid.ExampleMod"
-  ],
-  "client": [
-    "tfar.villagertradinggrid.ExampleModClient"
-  ]
 }
 }
   
