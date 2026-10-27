@@ -1,40 +1,27 @@
+
 {
-    "schemaVersion": 1,
-    "id": "${mod_id}",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "${description}",
-    "authors": [
-        "${mod_author}"
-    ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
-    "license": "${license}",
-    "icon": "assets/modid/${mod_id}.png",
-    "environment": "*",
-    "entrypoints": {
-      "main": [
-        "tfar.villagertradinggrid.ExampleMod"
-      ],
-      "client": [
-        "tfar.villagertradinggrid.ExampleModClient"
-      ]
-    },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=0.14",
-        "fabric": "*",
-        "minecraft": ">=1.20",
-        "java": ">=17"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+  "schemaVersion": 1,
+  "id": "villagertradinggrid",
+  "version": "0",
+  "name": "VillagerTradingGrid",
+  "description": "Changes villager trading to a grid",
+  "authors": [
+    "Tfarcenim"
+  ],
+  "license": "C0-1.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "tfar.villagertradinggrid.VillagerTradingGridFabric"
+    ]
+  },
+  "mixins": [
+    "villagertradinggrid.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric-api": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17"
+  }
 }
-}
-  

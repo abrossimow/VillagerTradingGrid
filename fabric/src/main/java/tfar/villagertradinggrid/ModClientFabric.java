@@ -4,7 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.gui.screens.MenuScreens;
 import tfar.villagertradinggrid.client.VillagerTradingGridScreen;
 
-public class ExampleModClient implements ClientModInitializer {
+public class ModClientFabric implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {

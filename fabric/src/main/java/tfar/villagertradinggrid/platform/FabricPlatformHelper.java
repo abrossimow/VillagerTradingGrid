@@ -2,7 +2,7 @@ package tfar.villagertradinggrid.platform;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.fabric.api.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
@@ -10,6 +10,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.LivingEntity;
 
 import tfar.villagertradinggrid.network.PacketHandler;
 import tfar.villagertradinggrid.network.client.S2CModPacket;
@@ -102,6 +103,7 @@ public class FabricPlatformHelper implements IPlatformHelper {
             ItemStack stack,
             EquipmentSlot slot,
             Player player) {
-        return stack.canEquip(slot, player);
+        return !stack.isEmpty()
+                && LivingEntity.getEquipmentSlotForItem(stack) == slot;
     }
 }
